@@ -5,7 +5,9 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/normalize.css" media="screen,projection" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/detectmobilebrowser.js"></script>
     <script src="js/typed.js"></script>
 
     <!--Let browser know website is optimized for mobile-->
@@ -15,7 +17,7 @@
 </head>
 
 <body>
-    <section class="page white-text center-align" id="landing">
+    <div class="white-text center-align" id="landing">
         <div id="particles-js"></div>
         <img id="logo" src="imgs/Zahid_Logo.png" />
         <h1 class="text-logo ">ZAHID ISLAM</h1>
@@ -37,8 +39,19 @@
                 <a href="javascript:buttonDelay('#contact-me')">CONTACT </a>
             </div>
         </div>
-    </section>
+    </div>
 
+    <div class="card-panel content-container">
+        <div class="container flow-text">
+            <div class="row">
+                <div class="s12 m6">
+                    <p class="content">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- <section class="page" id="about-me">
         <div class="container card-panel test">
             <div class="row">
@@ -55,13 +68,13 @@
         </div>
     </section> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/particles/particles.min.js"></script>
     <script src="js/particles/particlesConfig.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TimelineLite.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/easing/EasePack.min.js"></script>
+    <script src="js/GSAP/TimelineLite.min.js"></script>
+    <script src="js/GSAP/plugins/CSSPlugin.min.js"></script>
+    <script src="js/GSAP/plugins/EasePack.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
