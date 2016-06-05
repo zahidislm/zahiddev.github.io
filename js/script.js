@@ -29,9 +29,9 @@ $(document).ready(function() {
             },
             ease: Sine.easeOut
         })
-        .from("#logo", 0.8, {
-            scaleX: 0.01,
-            scaleY: 0.01,
+        .to("#logo", 0.8, {
+            scaleX: 1,
+            scaleY: 1,
             rotation: 360,
             ease: Sine.easeOut
         }, "+=0.3")
@@ -39,26 +39,26 @@ $(document).ready(function() {
             className: "z-depth-1",
             ease: Sine.easeOut
         })
-        .from(".text-logo", 0.5, {
-            scaleX: 0.01,
-            scaleY: 0.01,
+        .to(".text-logo", 0.5, {
+            scaleX: 1,
+            scaleY: 1,
             ease: Sine.easeOut
         }, "+= 0.2")
-        .from("#page-bar", 0.5, {
+        .to("#page-bar", 0.5, {
             css: {
-                marginTop: "30em"
+                marginTop: "6.5em"
             },
             ease: Sine.easeOut
         })
-        .from("#peek", 0.4, {
-            scaleX: 0.01,
-            scaleY: 0.01,
+        .to("#peek", 0.4, {
+            scaleX: 1,
+            scaleY: 1,
             ease: Sine.easeOut,
             onComplete: typeAnimate
         }, "+= 0.3")
-        .from("#i-am", 0.4, {
-            scaleX: 0.01,
-            scaleY: 0.01,
+        .to("#i-am", 0.4, {
+            scaleX: 1,
+            scaleY: 1,
             ease: Sine.easeOut
         }, "+= 6.6");
 
