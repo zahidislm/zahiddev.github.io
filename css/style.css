@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "brandon_bold";
+    src: url("../fonts/brandon/Brandon_bld.otf");
+}
+@font-face {
+    font-family: "brandon";
+    src: url("../fonts/brandon/Brandon_light.otf");
+}
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+body {
+    overflow: hidden;
+}
+.page {
+    width: 100%;
+    height: 100vh!important;
+    display: inline-block;
+}
+#about-me {
+    padding: 10px;
+}
+.test {
+    margin-left: 9%;
+    width: 100vw;
+}
+#landing {
+    top: 0;
+    left: 0;
+    /*position: absolute;*/
+    background: #c83539;
+    border: 0 solid white;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 1.25em;
+    white-space: nowrap;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+#logo {
+    width: 6em;
+    height: auto;
+    margin-top: 3%;
+    border-radius: 50%;
+}
+.text-logo {
+    font-family: brandon_bold;
+    font-size: 6em;
+    position: relative;
+    margin-top: -0.025em;
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    _boldheight: 100%;
+}
+#peek {
+    width: 100%;
+    height: 5.313em;
+    white-space: normal;
+}
+#peek span {
+    font-family: roboto;
+}
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#i-am {
+    display: inline-block;
+}
+#about-adj {
+    position: relative;
+    height: 12em;
+    top: 5%;
+}
+#about-adj span {
+    font-family: brandon;
+    font-size: 5.2em;
+    margin-left: 0.18em;
+    white-space: normal;
+}
+#about-adj .adj-list {
+    font-family: brandon_bold;
+    line-height: 0.8em;
+    ;
+}
+#page-bar {
+    margin-top: 6.5em;
+    display: inline-block;
+}
+.page-button {
+    border: solid white 0.185em;
+    padding-right: 0.625em;
+    padding-left: 0.625em;
+    float: left;
+    margin-right: 1.875em;
+}
+.page-button a {
+    font-size: 1.6em;
+    letter-spacing: .095em;
+    text-decoration: none;
+    color: white;
+}
+.page-button:hover {
+    background-color: white;
+}
+.page-button:hover a {
+    color: #c83539;
+}
