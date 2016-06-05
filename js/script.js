@@ -20,43 +20,46 @@ function buttonDelay(URL) {
     }, 700);
 }
 
-var landAnimation = new TimelineLite();
+$(document).ready(function() {
+    var landAnimation = new TimelineLite();
 
-landAnimation.to("#landing", 0.8, {
-        css: {
-            border: "0.75em solid white"
-        },
-        ease: Sine.easeOut
-    })
-    .from("#logo", 0.8, {
-        scaleX: 0.01,
-        scaleY: 0.01,
-        rotation: 360,
-        ease: Sine.easeOut
-    }, "+=0.3")
-    .to("#logo", 0.5, {
-        className: "z-depth-1",
-        ease: Sine.easeOut
-    })
-    .from(".text-logo", 0.5, {
-        scaleX: 0.01,
-        scaleY: 0.01,
-        ease: Sine.easeOut
-    }, "+= 0.2")
-    .from("#page-bar", 0.5, {
-        css: {
-            marginTop: "30em"
-        },
-        ease: Sine.easeOut
-    })
-    .from("#peek", 0.4, {
-        scaleX: 0.01,
-        scaleY: 0.01,
-        ease: Sine.easeOut,
-        onComplete: typeAnimate
-    }, "+= 0.3")
-    .from("#i-am", 0.4, {
-        scaleX: 0.01,
-        scaleY: 0.01,
-        ease: Sine.easeOut
-    }, "+= 6.6");
+    landAnimation.to("#landing", 0.8, {
+            css: {
+                border: "0.75em solid white"
+            },
+            ease: Sine.easeOut
+        })
+        .from("#logo", 0.8, {
+            scaleX: 0.01,
+            scaleY: 0.01,
+            rotation: 360,
+            ease: Sine.easeOut
+        }, "+=0.3")
+        .to("#logo", 0.5, {
+            className: "z-depth-1",
+            ease: Sine.easeOut
+        })
+        .from(".text-logo", 0.5, {
+            scaleX: 0.01,
+            scaleY: 0.01,
+            ease: Sine.easeOut
+        }, "+= 0.2")
+        .from("#page-bar", 0.5, {
+            css: {
+                marginTop: "30em"
+            },
+            ease: Sine.easeOut
+        })
+        .from("#peek", 0.4, {
+            scaleX: 0.01,
+            scaleY: 0.01,
+            ease: Sine.easeOut,
+            onComplete: typeAnimate
+        }, "+= 0.3")
+        .from("#i-am", 0.4, {
+            scaleX: 0.01,
+            scaleY: 0.01,
+            ease: Sine.easeOut
+        }, "+= 6.6");
+
+});
