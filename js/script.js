@@ -1,3 +1,8 @@
+if (jQuery.browser.mobile) {
+    $("#page-bar").hide();
+    $(".content-container").hide();
+}
+
 var landAnimation = new TimelineLite();
 
 function typeAnimate() {
@@ -26,43 +31,43 @@ function typeAnimate() {
 
 $(document).ready(function() {
 
-  landAnimation.to("#landing", 0.8, {
-    css: {
-      border: "0.75em solid white"
-    },
-    ease: Sine.easeOut
-  })
-  .to("#logo", 0.8, {
-    scaleX: 1,
-    scaleY: 1,
-    rotation: 360,
-    ease: Sine.easeOut
-  }, "+=0.25")
-  .to("#logo", 0.5, {
-    className: "z-depth-1",
-    ease: Sine.easeOut
-  })
-  .to(".text-logo", 0.5, {
-    scaleX: 1,
-    scaleY: 1,
-    ease: Sine.easeOut
-  });
+    landAnimation.to("#landing", 0.8, {
+            css: {
+                border: "0.75em solid white"
+            },
+            ease: Sine.easeOut
+        })
+        .to("#logo", 0.8, {
+            scaleX: 1,
+            scaleY: 1,
+            rotation: 360,
+            ease: Sine.easeOut
+        }, "+=0.25")
+        .to("#logo", 0.5, {
+            className: "z-depth-1",
+            ease: Sine.easeOut
+        })
+        .to(".text-logo", 0.5, {
+            scaleX: 1,
+            scaleY: 1,
+            ease: Sine.easeOut
+        });
 
-  if(!jQuery.browser.mobile){
-    landAnimation.to("#page-bar", 0.5, {
-      css: {
-        marginTop: "6.5em"
-      },
-      ease: Sine.easeOut
-    });
-  }
+    if (!jQuery.browser.mobile) {
+        landAnimation.to("#page-bar", 0.5, {
+            css: {
+                marginTop: "6.5em"
+            },
+            ease: Sine.easeOut
+        });
+    }
 
-  landAnimation.to("#peek", 0.4, {
-    scaleX: 1,
-    scaleY: 1,
-    ease: Sine.easeOut,
-    onComplete: typeAnimate
-  }, "+= 0.3");
+    landAnimation.to("#peek", 0.4, {
+        scaleX: 1,
+        scaleY: 1,
+        ease: Sine.easeOut,
+        onComplete: typeAnimate
+    }, "+= 0.3");
 });
 
 if (!jQuery.browser.mobile) {
