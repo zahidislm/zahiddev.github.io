@@ -3,9 +3,9 @@
 
 <head>
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/normalize.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" media="screen,projection" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/detectmobilebrowser.js"></script>
     <script src="js/typed.js"></script>
@@ -18,12 +18,10 @@
 
 <body>
     <div class="white-text center-align" id="landing">
+        <div class="bg-layer"></div>
         <div id="particles-js"></div>
         <img id="logo" src="imgs/Zahid_Logo.png" />
         <h1 class="text-logo ">ZAHID ISLAM</h1>
-        <div id="peek">
-            <span class="flow-text about-peek"></span>
-        </div>
 
         <div class="center-align" id="about-adj">
             <span id="i-am">I AM A </span>
@@ -31,50 +29,77 @@
         </div>
 
         <div id="page-bar">
-            <div class="page-button waves-effect waves-red" id="about-button">
-                <a href="javascript:buttonDelay('#about-me')">ABOUT ME</a>
+            <div class="page-button waves-effect waves-blue" id="about-button">
+                <a href="javascript:buttonDelay('#about-button', '#about-me')">ABOUT ME</a>
             </div>
 
-            <div class="page-button waves-effect waves-red" id="contact-button">
-                <a href="javascript:buttonDelay('#contact-me')">CONTACT </a>
+            <div class="page-button waves-effect waves-blue" id="work-button">
+                <a href="javascript:buttonDelay('#work-button', '#my-work')">MY WORK </a>
+            </div>
+
+            <div class="page-button waves-effect waves-blue" id="contact-button">
+                <a href="javascript:buttonDelay('#contact-button', '#contact-me')">CONTACT </a>
             </div>
         </div>
     </div>
 
     <div class="card-panel content-container">
-        <div class="container flow-text">
-            <div class="row">
-                <div class="s12 m6">
-                    <p class="content">
+        <div id="close">
+            <div class="one"></div>
+            <div class="two"></div>
+        </div>
 
+        <div id="about-me" class="page">
+            <div class="container flow-text">
+                <img src="imgs/img.jpg" alt="" />
+                <div class="m6">
+                    <div class="row">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis est vitae
+                            ipsum mattis blandit. Integer quis elit lectus. Cras
+                            ac porta nibh. Vestibulum accumsan tincidunt semper.
+                            Morbi aliquet sapien a placerat fringilla. Aliquam posuere
+                            condimentum orci sagittis suscipit. Nam pharetra vestibulum
+                            rutrum. Aenean quis velit laoreet, porttitor tortor eget,
+                            pharetra leo. Vestibulum enim leo, elementum sit amet
+                            bibendum vehicula, finibus non massa. Nullam sed porta
+                            orci. Duis a tortor et dolor interdum vulputate. Quisque
+                            ultrices commodo metus, at interdum velit luctus et.
+                            Curabitur a venenatis enim. Sed venenatis nisi nec massa
+                            hendrerit, quis convallis felis dapibus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-me" class="page">
+            <div class="flow-text">
+                <div class="contact-container">
+                    <p>
+                        A bridge approves a sunrise noble. My bush bulletin crawls. Opposite the neighbor
+                        barks a spiral packet. Without a rear talks a rhetorical
+                        sufferer. The cheerful anagram fulfills the subway. A magazine
+                        chooses the stuff. The commentary suspects outside the shout!
+                        An adverse jelly results outside the native politician. How
+                        will the twist choose? Below an artist thinks the message.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <section class="page" id="about-me">
-        <div class="container card-panel test">
-            <div class="row">
-                <div class="s12 m12 flow-text">
-                    <h1 class="red-text">WHO AM I?</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse convallis pellentesque diam, non pretium maurispellentesque ac. Nulla ante ligula, facilisis eget enim vel, dictum tempor lectus. Nullam sodales, mauris in finibuscommodo, lorem libero
-                        egestas odio, a posuere diam diam sit amet lacus. Proin vulputate sagittis diam, sit amet porta ligula tincidunt ut.Nullam nec lectus convallis, consequat nibh at, dictum dui. Morbi maximus condimentum erat, a venenatis urna ultricies
-                        vitae. Aliquam pretium leo sit amet lacus euismod, tincidunt volutpat urna egestas. Vivamus porttitor lacinia semper. Duisvitae dui sapien. Vestibulum ut efficitur quam. In hac habitasse platea dictumst. Vestibulum mauris leo,
-                        sodales nec mi sit amet, gravida sagittis enim. Duis non dui a eros dictum gravida. Sed rhoncus turpis at nibh hendrerit,id imperdiet est mollis.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
-    <script src="js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+    <script data-no-instant>
+        InstantClick.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     <script src="js/particles/particles.min.js"></script>
     <script src="js/particles/particlesConfig.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
-    <script src="js/GSAP/TimelineLite.min.js"></script>
-    <script src="js/GSAP/plugins/CSSPlugin.min.js"></script>
-    <script src="js/GSAP/plugins/EasePack.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TimelineLite.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
+    <script src="js/GSAP/plugins/CustomEase.js"></script>
     <script src="js/script.js"></script>
 </body>
 
