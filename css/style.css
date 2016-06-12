@@ -23,9 +23,9 @@ body {
     -ms-user-select: none;
     -webkit-user-select: none;
     background: url("../imgs/bg.jpg");
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
     height: 100vh!important;
     left: 0;
     overflow: hidden;
@@ -121,9 +121,9 @@ body {
 #close {
     cursor: pointer;
     margin-left: 96.5%;
-    margin-top: 1.25%;
+    padding-bottom: .75em;
     position: relative;
-    width: 30px;
+    width: 2em;
     z-index: 9
 }
 #close div {
@@ -157,28 +157,41 @@ body {
 .visible {
     visibility: visible
 }
-#about-me img {
-    float: left;
-    height: 500px;
-    margin-left: -3.5em;
-    position: fixed;
-    width: 30%
+#selfie,
+#selfie img {
+    max-height: 20.25em;
+    padding-left: 0;
+    padding-right: 0;
+    position: fixed
 }
-#about-me p {
-    float: right;
-    max-width: 60%;
-    text-align: justify
+#contact-me {
+    overflow-y: hidden
 }
-.contact-container {
-    background: #314593;
-    display: block;
-    height: 10em;
+.email {
+    color: #4B77BE;
+    font-family: Roboto;
+    font-size: 1.5em;
+    font-weight: 300
+}
+.email a {
+    color: #b0bec5;
+    font: size: 1.65em;
+    font-family: Roboto;
+    font-weight: 200
+}
+.social-bar {
+    list-style: none;
     width: 100%
 }
-.contact-container p {
-    color: #fff;
-    padding: 1em 4em;
-    text-align: justify
+.social-bar li {
+    display: inline-block
+}
+.social-bar a {
+    margin-left: 1.25em
+}
+.social-bar a img {
+    border-radius: 50%;
+    width: 3em
 }
 .page-button:hover,
 .button-clicked {

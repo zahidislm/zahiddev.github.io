@@ -1,13 +1,3 @@
-if (jQuery.browser.mobile) {
-    $(document.body).on("touchmove", function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-    });
-
-    $("#page-bar").hide();
-    $(".content-container").hide();
-}
-
 var landAnimation = new TimelineLite();
 var growCurve = BezierEasing(0.4, 0.0, 0.2, 1);
 var easeIn = BezierEasing(0.0, 0.0, 0.2, 1);
@@ -91,7 +81,7 @@ if (!jQuery.browser.mobile) {
 
         setTimeout(function () {
             if (!$(".content-container").hasClass('active')) {
-                navAnimation.to(".content-container", 0.3, {
+                navAnimation.to(".content-container", 0.2, {
                     z: 0.01,
                     rotationZ: 0.01,
                     css: {
@@ -149,5 +139,31 @@ if (!jQuery.browser.mobile) {
                 pageButton.has(e.target).length === 0) && (container.hasClass("active"))) {
             closePanel();
         }
+    });
+
+    var iconHoverAnimation = new TimelineLite();
+    var hoverIcon;
+
+    function iconHover(icon, state) {
+        if (state == "on")
+            hoverIcon = 'url("imgs/social/' + icon + '_h.png")';
+        else
+            hoverIcon = 'url("imgs/social/' + icon + '.png")';
+
+        iconHoverAnimation.to("#" + icon, 0, {
+            css: {
+                content: hoverIcon
+            },
+            ease: new Ease(growCurve)
+        });
+    }
+
+    var socialButton = $(".social-bar img");
+    var socialType;
+    socialButton.hover(function () {
+        socialType = $(this).attr("id");
+        iconHover(socialType, "on");
+    }, function () {
+        iconHover(socialType, "off");
     });
 }
