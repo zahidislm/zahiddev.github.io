@@ -85,7 +85,7 @@ if (!jQuery.browser.mobile) {
                     z: 0.01,
                     rotationZ: 0.01,
                     css: {
-                        top: "5%"
+                        top: "5em"
                     },
                     ease: new Ease(easeOut),
                     force3d: true,
@@ -114,7 +114,7 @@ if (!jQuery.browser.mobile) {
 
         .to(".content-container", 0.01, {
             css: {
-                top: "150%"
+                top: "175em"
             }
         })
 
