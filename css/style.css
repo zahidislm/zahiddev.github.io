@@ -93,8 +93,11 @@ body {
     line-height: .8em
 }
 #page-bar {
+    position: absolute;
     display: inline-block;
-    margin-top: 30em
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .page-button {
     border: solid #FFF .185em;
@@ -112,7 +115,7 @@ body {
 .content-container {
     -webkit-transform: translateX(-50%);
     color: #6C7A89;
-    height: 40em;
+    height: 80%;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
@@ -143,12 +146,11 @@ body {
     transform: rotate(-45deg) translate(5px, -5.5px)
 }
 .page {
-    height: 85%;
+    height: 80%;
     left: 2%;
     overflow-y: auto;
     position: absolute;
     visibility: hidden;
-    width: 96%
 }
 .page-button:hover a,
 .button-clicked a {
@@ -159,7 +161,7 @@ body {
 }
 #selfie,
 #selfie img {
-    max-height: 20.25em;
+    max-height: 80%;
     padding-left: 0;
     padding-right: 0;
     position: fixed

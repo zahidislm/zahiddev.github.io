@@ -49,7 +49,7 @@ $(document).ready(function () {
     if (!jQuery.browser.mobile) {
         landAnimation.to("#page-bar", 0.5, {
             css: {
-                marginTop: "11em"
+                top: "90%"
             },
             ease: new Ease(easeIn)
         }, "-=0.5");
