@@ -164,6 +164,7 @@ body {
 #selfie,
 #selfie img {
     max-height: 80%;
+    max-width: 30%;
     padding-left: 0;
     padding-right: 0;
     margin-left: -2.5%;

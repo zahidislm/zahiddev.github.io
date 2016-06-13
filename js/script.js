@@ -85,7 +85,7 @@ if (!jQuery.browser.mobile) {
                     z: 0.01,
                     rotationZ: 0.01,
                     css: {
-                        top: "5em"
+                        top: "2.25em"
                     },
                     ease: new Ease(easeOut),
                     force3d: true,
