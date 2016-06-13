@@ -61,7 +61,7 @@ body {
     font-family: brandon_bold;
     font-size: 6em;
     letter-spacing: .075em;
-    margin-top: 2.5em;
+    margin-top: 10%;
     position: relative;
     transform: scale(.01, .01);
     white-space: normal
@@ -98,6 +98,7 @@ body {
     top: 120%;
     left: 50%;
     transform: translateX(-50%);
+    width: 37.4em;
 }
 .page-button {
     border: solid #FFF .185em;
@@ -164,6 +165,7 @@ body {
     max-height: 80%;
     padding-left: 0;
     padding-right: 0;
+    margin-left: -2.5%;
     position: fixed
 }
 #contact-me {
@@ -172,7 +174,7 @@ body {
 .email {
     color: #4B77BE;
     font-family: Roboto;
-    font-size: 1.5em;
+    font-size: 130%;
     font-weight: 300
 }
 .email a {
@@ -182,6 +184,7 @@ body {
     font-weight: 200
 }
 .social-bar {
+    margin-top: -0.75em;
     list-style: none;
     width: 100%
 }
@@ -189,11 +192,11 @@ body {
     display: inline-block
 }
 .social-bar a {
-    margin-left: 1.25em
+    margin-left: 1em;
 }
 .social-bar a img {
     border-radius: 50%;
-    width: 3em
+    width: 70px;
 }
 .page-button:hover,
 .button-clicked {
