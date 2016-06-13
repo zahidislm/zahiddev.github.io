@@ -114,7 +114,7 @@ if (!jQuery.browser.mobile) {
 
         .to(".content-container", 0.01, {
             css: {
-                top: "100%"
+                top: "130%"
             }
         })
 
