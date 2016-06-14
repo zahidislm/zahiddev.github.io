@@ -10,11 +10,12 @@ function typeAnimate() {
         ease: new Ease(growCurve),
         onComplete: function () {
             $(".adj-list").typed({
-                strings: ["INNOVATOR", "LEADER", "DEVELOPER", "TEAM PLAYER", "LEARNER",
-                    "THINKER"
+                strings: ["INNOVATING", "LEADING", "DEVELOPING", "LEARNING", "SIMPLIFYING",
+                    "BEING COMPETITIVE", "DESIGNING", "ARCHERY", "TECHNOLOGY", "SCIENCE", "DATA",
+                    "HAVING FUN", "CODE", "HBO SHOWS", "ESPORTS", "COFFEE"
                 ],
                 showCursor: false,
-                typeSpeed: 75,
+                typeSpeed: 65,
                 startDelay: 300,
                 backDelay: 2500,
                 loop: true
@@ -81,7 +82,7 @@ if (!jQuery.browser.mobile) {
 
         setTimeout(function () {
             if (!$(".content-container").hasClass('active')) {
-                navAnimation.to(".content-container", 0.2, {
+                navAnimation.to(".content-container", 0.35, {
                     z: 0.01,
                     rotationZ: 0.01,
                     css: {

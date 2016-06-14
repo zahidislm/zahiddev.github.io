@@ -98,20 +98,22 @@ body {
     top: 120%;
     left: 50%;
     transform: translateX(-50%);
-    width: 37.4em;
+    width: 37.5em
 }
 .page-button {
     border: solid #FFF .185em;
     float: left;
-    margin-right: 1.875em;
-    padding-left: .625em;
-    padding-right: .625em
+    margin-right: 1.875em
 }
 .page-button a {
+    padding-left: .4em;
+    padding-right: .4em;
+    display: block;
     color: #FFF;
     font-size: 160%;
     letter-spacing: .095em;
-    text-decoration: none
+    text-decoration: none;
+    text-align: center
 }
 .content-container {
     -webkit-transform: translateX(-50%);
@@ -152,7 +154,7 @@ body {
     left: 2%;
     overflow-y: auto;
     position: absolute;
-    visibility: hidden;
+    visibility: hidden
 }
 .page-button:hover a,
 .button-clicked a {
@@ -198,7 +200,7 @@ body {
 }
 .social-bar a img {
     border-radius: 50%;
-    width: 70px;
+    width: 70px
 }
 .page-button:hover,
 .button-clicked {
