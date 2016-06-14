@@ -6,8 +6,7 @@
     font-family: brandon;
     src: url("../fonts/brandon/Brandon_light.otf")
 }
-html,
-body {
+html, body {
     -webkit-font-smoothing: antialiased!important;
     font-smoothing: antialiased!important;
     height: 100%;
@@ -156,15 +155,13 @@ body {
     position: absolute;
     visibility: hidden
 }
-.page-button:hover a,
-.button-clicked a {
+.page-button:hover a, .button-clicked a {
     color: #4B77BE
 }
 .visible {
     visibility: visible
 }
-#selfie,
-#selfie img {
+#selfie, #selfie img {
     max-height: 80%;
     max-width: 30%;
     padding-left: 0;
@@ -202,7 +199,6 @@ body {
     border-radius: 50%;
     width: 70px
 }
-.page-button:hover,
-.button-clicked {
+.page-button:hover, .button-clicked {
     background: #FFF
 }

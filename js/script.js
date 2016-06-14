@@ -8,11 +8,11 @@ function typeAnimate() {
         scaleX: 1,
         scaleY: 1,
         ease: new Ease(growCurve),
-        onComplete: function () {
+        onComplete: function() {
             $(".adj-list").typed({
                 strings: ["INNOVATING", "LEADING", "DEVELOPING", "LEARNING", "SIMPLIFYING",
-                    "BEING COMPETITIVE", "DESIGNING", "ARCHERY", "TECHNOLOGY", "SCIENCE", "DATA",
-                    "HAVING FUN", "CODE", "HBO SHOWS", "ESPORTS", "COFFEE"
+                    "BEING COMPETITIVE", "DESIGNING", "ARCHERY", "TECHNOLOGY", "OPEN SOURCE", "AI",
+                    "HAVING FUN", "CODE", "HBO SHOWS", "ESPORTS", "COFFEE", "MOONSHOTS", "NETWORKING"
                 ],
                 showCursor: false,
                 typeSpeed: 65,
@@ -25,7 +25,7 @@ function typeAnimate() {
 }
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     landAnimation.to("#logo", 0.8, {
         css: {
@@ -80,7 +80,7 @@ if (!jQuery.browser.mobile) {
             $(page).addClass('visible');
         }
 
-        setTimeout(function () {
+        setTimeout(function() {
             if (!$(".content-container").hasClass('active')) {
                 navAnimation.to(".content-container", 0.35, {
                     z: 0.01,
@@ -90,7 +90,7 @@ if (!jQuery.browser.mobile) {
                     },
                     ease: new Ease(easeOut),
                     force3d: true,
-                    onComplete: function () {
+                    onComplete: function() {
                         $(".content-container").addClass("active");
                     }
                 });
@@ -108,7 +108,7 @@ if (!jQuery.browser.mobile) {
             rotationZ: 0.01,
             ease: new Ease(easeIn),
             force3d: true,
-            onComplete: function () {
+            onComplete: function() {
                 $(".content-container").removeClass("active");
             }
         })
@@ -121,18 +121,18 @@ if (!jQuery.browser.mobile) {
 
         .to(".content-container", 0.01, {
             css: {
-                left: "50%",
+                left: "50%"
             },
-            onComplete: function () {
+            onComplete: function() {
                 navAnimation.clear();
             }
         });
     }
 
-    $(document).mouseup(function (e) {
+    $(document).mouseup(function(e) {
         var container = $(".content-container");
         var pageButton = $(".page-button");
-        $("#close").on("click", function () {
+        $("#close").on("click", function() {
             closePanel();
         });
 
@@ -161,10 +161,10 @@ if (!jQuery.browser.mobile) {
 
     var socialButton = $(".social-bar img");
     var socialType;
-    socialButton.hover(function () {
+    socialButton.hover(function() {
         socialType = $(this).attr("id");
         iconHover(socialType, "on");
-    }, function () {
+    }, function() {
         iconHover(socialType, "off");
     });
 }
