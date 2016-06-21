@@ -1,4 +1,8 @@
+TweenLite.lagSmoothing(250, 16);
+
 var landAnimation = new TimelineLite();
+landAnimation.progress(1).progress(0);
+
 var growCurve = BezierEasing(0.4, 0.0, 0.2, 1);
 var easeIn = BezierEasing(0.0, 0.0, 0.2, 1);
 var easeOut = BezierEasing(0.4, 0.0, 1, 1);
@@ -59,13 +63,27 @@ $(document).ready(function() {
     typeAnimate();
 });
 
+if (jQuery.browser.mobile) {
+    document.swipe({
+        swipeStatus: function(event, phase, direction, distance, fingerCount) {
+            if (direction !== "DOWN")
+                return false;
+        }
+    });
+} else {
+    document.ontouchstart = function(e) {
+        e.preventDefault();
+    };
+}
+
 
 if (!jQuery.browser.mobile) {
     var navAnimation = new TimelineLite();
+    navAnimation.progress(1).progress(0);
     var pageAnimation = new TimelineLite();
+    pageAnimation.progress(1).progress(0);
 
     function buttonDelay(button, page) {
-
         if ($('#page-bar div').hasClass('button-clicked z-depth-1')) {
             $('#page-bar div').removeClass('button-clicked z-depth-1');
             $(button).toggleClass('button-clicked z-depth-1');
@@ -80,49 +98,39 @@ if (!jQuery.browser.mobile) {
             $(page).addClass('visible');
         }
 
-        setTimeout(function() {
-            if (!$(".content-container").hasClass('active')) {
-                navAnimation.to(".content-container", 0.35, {
-                    z: 0.01,
-                    rotationZ: 0.01,
-                    css: {
-                        top: "2.25em"
-                    },
-                    ease: new Ease(easeOut),
-                    force3d: true,
-                    onComplete: function() {
-                        $(".content-container").addClass("active");
-                    }
-                });
-            }
-        }, 250);
+        if (!$(".content-container").hasClass('active')) {
+            navAnimation.to(".content-container", 0.3, {
+                yPercent: -120,
+                z: 0.01,
+                rotationZ: 0.01,
+                force3d: true,
+                ease: new Ease(easeOut),
+                onComplete: function() {
+                    $(".content-container").addClass("active");
+                }
+            });
+        }
     }
 
     function closePanel() {
         $("#page-bar div").removeClass("button-clicked z-depth-1");
         navAnimation.to(".content-container", 0.5, {
-            css: {
-                left: "150%"
-            },
+            xPercent: 150,
             z: 0.1,
             rotationZ: 0.01,
-            ease: new Ease(easeIn),
             force3d: true,
+            ease: new Ease(easeIn),
             onComplete: function() {
                 $(".content-container").removeClass("active");
             }
         })
 
         .to(".content-container", 0.01, {
-            css: {
-                top: "175em"
-            }
+            yPercent: 100
         })
 
         .to(".content-container", 0.01, {
-            css: {
-                left: "50%"
-            },
+            xPercent: 0,
             onComplete: function() {
                 navAnimation.clear();
             }
@@ -140,31 +148,5 @@ if (!jQuery.browser.mobile) {
                 pageButton.has(e.target).length === 0) && (container.hasClass("active"))) {
             closePanel();
         }
-    });
-
-    var iconHoverAnimation = new TimelineLite();
-    var hoverIcon;
-
-    function iconHover(icon, state) {
-        if (state == "on")
-            hoverIcon = 'url("imgs/social/' + icon + '_h.png")';
-        else
-            hoverIcon = 'url("imgs/social/' + icon + '.png")';
-
-        iconHoverAnimation.to("#" + icon, 0, {
-            css: {
-                content: hoverIcon
-            },
-            ease: new Ease(growCurve)
-        });
-    }
-
-    var socialButton = $(".social-bar img");
-    var socialType;
-    socialButton.hover(function() {
-        socialType = $(this).attr("id");
-        iconHover(socialType, "on");
-    }, function() {
-        iconHover(socialType, "off");
     });
 }

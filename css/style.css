@@ -83,9 +83,28 @@ body {
 }
 #about-adj span {
     font-family: brandon;
-    font-size: 4em;
+    font-size: 400%;
     margin-left: .18em;
     white-space: normal
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+/*and (-webkit-min-device-pixel-ratio: 2)*/
+
+and (orientation: portrait) {
+    .text-logo {
+        margin-top: 40%;
+        font-size: 5em;
+    }
+    #about-adj {
+        margin-top: 25%;
+    }
+    #about-adj span {
+        font-size: 310%;
+    }
+    #about-adj span:nth-child(2):before {
+        content: '\A';
+        white-space: pre-wrap;
+    }
 }
 #about-adj .adj-list {
     font-family: brandon_bold;
@@ -97,7 +116,7 @@ body {
     top: 120%;
     left: 50%;
     transform: translateX(-50%);
-    width: 37.5em
+    width: 37.61em
 }
 .page-button {
     border: solid #FFF .185em;
@@ -119,7 +138,6 @@ body {
     color: #6C7A89;
     height: 80%;
     left: 50%;
-    top: 175em;
     position: absolute;
     transform: translateX(-50%);
     width: 80%
@@ -169,7 +187,7 @@ body {
     margin-left: -2.5%;
     position: fixed
 }
-#contact-me {
+#my-work, #contact-me {
     overflow-y: hidden
 }
 .email {
