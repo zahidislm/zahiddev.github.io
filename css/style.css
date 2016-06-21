@@ -92,7 +92,6 @@ body {
 
 and (orientation: portrait) {
     .text-logo {
-        margin-top: 25%;
         font-size: 5em;
     }
     #about-adj {
