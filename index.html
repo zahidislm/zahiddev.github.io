@@ -75,23 +75,18 @@
                 <a href="javascript:buttonDelay('#work-button', '#my-work')">MY WORK </a>
             </div>
 
-            <div class="page-button  waves-effect waves-light hoverable waves-blue hoverable" id="contact-button">
+            <div class="page-button waves-effect waves-blue hoverable" id="contact-button">
                 <a href="javascript:buttonDelay('#contact-button', '#contact-me')">CONTACT </a>
             </div>
         </div>
     </div>
 
     <div class="card-panel content-container hide-on-med-and-down hoverable">
-        <div id="close">
-            <div class="one"></div>
-            <div class="two"></div>
-        </div>
-
         <div id="about-me" class="page">
             <div class="container flow-text">
                 <div class="row">
                     <div id="selfie" class="col m4 pull-m7">
-                        <img class="responsive-img" src="imgs/img.png" alt="" />
+                        <img class="responsive-img" src="imgs/img.png" />
                     </div>
                     <div class="col m9 push-m5">
                         <p>
@@ -101,9 +96,31 @@
                             <br> During my offtime, I'm an Android developer that spotlights the use of Deep Learning and Machine Learning algorithms with several applications such as Artificial Intelligence, Big Data management, and assistance services.
                             I also enjoy casual web development with Dartlang.
                             <br>
-                            <br> My main language tools for software engineering are
-                            <i style="color:rgb(76,175,80)">C++</i>, <i style="color:rgb(76,175,80)">Java</i>, and <i style="color:rgb(76,175,80)">Python</i>, but I'm currently learning Kotlin, Rust, Dartlang, and R.
+                            <br> My main language tools for software engineering are <b>C++</b>, <b>Java</b>, and <b>Python</b>, but I'm currently learning Kotlin, Rust, Dartlang, and R.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="my-work" class="page">
+            <div class="container">
+                <div class="row">
+                    <div class="col m12 center-align flow-text" id="spotlight">
+                        <p>
+                            W I P
+                        </p>
+                    </div>
+
+                    <div class="col m12 center-align flow-text" id="git-link">
+                        <span>
+                            Come take a gander at my code:
+                        </span>
+                        <div id="git-button" class="hoverable">
+                            <a href="https://github.com/zahiddev" target="_blank">
+                                <i class="fa fa-github" aria-hidden="true"></i> GITHUB
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,21 +139,27 @@
 
                         <ul class="social-bar">
                             <li>
-                                <a href="https://twitter.com/zahiddev" target="_blank">
-                                    <img class="responsive-img hoverable" id="twitter" src="imgs/social/twitter.png" onmouseover="this.src='imgs/social/twitter_h.png';" onmouseout="this.src='imgs/social/twitter.png'" title="Twitter" />
-                                </a>
+                                <div class="social-icon twit hoverable">
+                                    <a href="https://twitter.com/zahiddev" target="_blank">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </li>
 
                             <li>
-                                <a href="https://plus.google.com/100377152065974713129" target="_blank">
-                                    <img class="responsive-img hoverable" id="googleplus" src="imgs/social/googleplus.png" onmouseover="this.src='imgs/social/googleplus_h.png';" onmouseout="this.src='imgs/social/googleplus.png'" title="Google Plus" />
-                                </a>
+                                <div class="social-icon gplus center-align hoverable">
+                                    <a href="https://plus.google.com/100377152065974713129" target="_blank">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </li>
 
                             <li>
-                                <a href="https://ca.linkedin.com/in/zahidofficial" target="_blank">
-                                    <img class="responsive-img hoverable" id="linkedin" src="imgs/social/linkedin.png" onmouseover="this.src='imgs/social/linkedin_h.png';" onmouseout="this.src='imgs/social/linkedin.png'" title="Linkedin" />
-                                </a>
+                                <div class="social-icon linkin center-align hoverable">
+                                    <a href="https://ca.linkedin.com/in/zahidofficial" target="_blank">
+                                        <i class="fa fa-linkedin " aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </li>
                         </ul>
 
@@ -147,6 +170,9 @@
                 </div>
             </div>
         </div>
+        <div class="close btn-floating btn-large waves-effect waves-light red">
+            <img class="responsive-im center-align" src="imgs/close_white.png" />
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
@@ -154,7 +180,6 @@
         InstantClick.init();
     </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script src="js/detectmobilebrowser.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
@@ -165,6 +190,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
     <script src="js/GSAP/plugins/CustomEase.min.js"></script>
     <script src="js/script.min.js"></script>
+    <script src="https://use.fontawesome.com/ce8f2dab3f.js"></script>
 </body>
 
 </html>
