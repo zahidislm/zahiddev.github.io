@@ -2,33 +2,35 @@
 <html>
 
 <head>
-    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="apple-mobile-web-app-title" content="Zahid's Portfolio">
-    <meta name="application-name" content="Zahid's Portfolio">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
-    <meta name="msapplication-config" content="favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
     <meta http-equiv="Cache-control" content="public">
-    <title>Zahid Islam</title>
+    <meta http-equiv="Expires" content="30" />
+    <meta name="description" content="Personal portfolio for Zahid Islam. Displays short introduction, work, and social contact information of a entry level software engineer under Machine Learning and Artificial Intelligence." />
+    <meta name="keywords" content="Machine Learning, Software Engineer, portfolio, Zahid, Zahid Islam, Zahidul, Zahidul Islam, Artificial Intelligence, Tensorflow" />
+    <meta name="author" content="metatags generator">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 month">
+    <title>Zahid's Portfolio: ML Software Developer </title>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+    <meta name="apple-mobile-web-app-title" content="Zahid's Portfolio">
     <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicon/favicon-194x194.png" sizes="194x194">
-    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+
+    <link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128" />
+
     <link rel="manifest" href="favicon/manifest.json">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#19237E">
+
+    <meta name="application-name" content="Zahid's Portfolio">
+    <meta name="msapplication-TileColor" content="#19237E">
+    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#19237E">
+
     <link rel="shortcut icon" href="favicon/favicon.ico">
 
     <script>
@@ -82,6 +84,7 @@
     </div>
 
     <div class="card-panel content-container hide-on-med-and-down hoverable">
+        <div id="stage" class="page visible"></div>
         <div id="about-me" class="page">
             <div class="container flow-text">
                 <div class="row">
@@ -111,13 +114,13 @@
                             W I P
                         </p>
                     </div>
-
+                    <hr />
                     <div class="col m12 center-align flow-text" id="git-link">
                         <span>
                             Come take a gander at my code:
                         </span>
-                        <div id="git-button" class="hoverable">
-                            <a href="https://github.com/zahiddev" target="_blank">
+                        <div id="git-button" class="waves-effect waves-light hoverable">
+                            <a href="javascript:clickDelay('https://github.com/zahiddev')" target="_blank">
                                 <i class="fa fa-github" aria-hidden="true"></i> GITHUB
                             </a>
                         </div>
@@ -134,30 +137,33 @@
                             Hit me up to ask me a question, request my resume, or even to just say hi at:
                             <a href="mailto:zahidulofficial@gmail.com?Subject=Hey%20there!" target="_top">zahidulofficial@gmail.com</a>
                             <br>
-                            <br> Or catch me around here:
+                            <br>
+                            <span>
+                                Or catch me around here:
+                            </span>
                         </p>
 
                         <ul class="social-bar">
                             <li>
-                                <div class="social-icon twit hoverable">
-                                    <a href="https://twitter.com/zahiddev" target="_blank">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <div id="twit" class="social-icon waves-effect waves-light hoverable">
+                                    <a href="javascript:clickDelay('https://twitter.com/zahiddev')" target="_blank">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i> <span>TWITTER</span>
                                     </a>
                                 </div>
                             </li>
 
                             <li>
-                                <div class="social-icon gplus center-align hoverable">
-                                    <a href="https://plus.google.com/100377152065974713129" target="_blank">
-                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                <div id="gplus" class="social-icon center-align waves-effect waves-light hoverable">
+                                    <a href="javascript:clickDelay('https://plus.google.com/100377152065974713129')" target="_blank">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i> <span>GOOGLE+</span>
                                     </a>
                                 </div>
                             </li>
 
                             <li>
-                                <div class="social-icon linkin center-align hoverable">
-                                    <a href="https://ca.linkedin.com/in/zahidofficial" target="_blank">
-                                        <i class="fa fa-linkedin " aria-hidden="true"></i>
+                                <div id="linkin" class="social-icon center-align waves-effect waves-light hoverable">
+                                    <a href="javascript:clickDelay('https://ca.linkedin.com/in/zahidofficial')" target="_blank">
+                                        <i class="fa fa-linkedin " aria-hidden="true"></i> <span>LINKEDIN</span>
                                     </a>
                                 </div>
                             </li>

@@ -80,12 +80,19 @@ function buttonDelay(button, page) {
         $(button).addClass("button-clicked z-depth-1");
     }
 
-    if ($(".content-container div").hasClass("visible")) {
-        $(".content-container div").removeClass("visible");
-        $(page).toggleClass("visible");
+    $("#stage").html($(page).html());
+
+    if (page == "#my-work") {
+        $("#stage").addClass("no-overflow");
+        $("#stage").addClass("width-fix");
+        $("#stage .container").addClass("width-fix-contain");
     } else {
-        $(page).addClass("visible");
+        $("#stage").removeClass("no-overflow");
+        $("#stage").removeClass("width-fix");
+        $("#stage .container").removeClass("width-fix-contain");
     }
+    if (page == "#contact-me")
+        $("#stage").addClass("no-overflow");
 
     if (!container.hasClass("active")) {
         navAnimation.to(".content-container", 0.3, {
@@ -149,7 +156,7 @@ function closePanel() {
 function clickDelay(URL) {
     setTimeout(function() {
         $("<a>").attr("href", URL).attr("target", "_blank")[0].click();
-    }, 325);
+    }, 350);
 }
 
 $(document).ready(function() {
