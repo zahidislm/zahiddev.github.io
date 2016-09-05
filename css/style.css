@@ -21,6 +21,10 @@ body {
     overflow: hidden
 }
 
+a {
+  padding: 0.18em
+}
+
 ::selection {
     background: rgb(26, 35, 126);
     color: #fff
