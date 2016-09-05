@@ -163,11 +163,11 @@ $(document).ready(function() {
     loadAnimation();
 
     var browserWidth = 0;
-    $(window).load(function() {
+    $(window).on("load", function() {
         browserWidth = $(window).width();
     });
 
-    $(window).bind("resize", function(e) {
+    $(window).on("resize", function(e) {
         if ($(window).width() != browserWidth) {
             if (window.RT)
                 clearTimeout(window.RT);

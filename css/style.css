@@ -31,6 +31,10 @@ body {
     color: #fff
 }
 
+a {
+  padding: 0.18em
+}
+
 #landing {
     -moz-user-select: none;
     -ms-user-select: none;
